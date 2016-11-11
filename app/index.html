@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+
+<body>
+    <div class="box"  ng-app="app" ng-controller="LoginController">
+        <div class="title">
+            <p class="text">Login Form</p>
+            <div class="closed"></div>
+        </div>
+        <div class="divForm">
+            <form>
+                <input class="inputUser" type="text" name="user" placeholder="Username" ng-model="user">
+                <input class="inputPass"  type="password"  name="pass" placeholder="Password" ng-model="pass">                
+                <input class="btnlogin" ng-click="login(user,pass)" type="submit" value="Sign In">
+                <a class="lostPass" href="#">Lost Your Password ?</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

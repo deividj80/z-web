@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+    <div class="container divhome" ng-app="app" ng-controller="HomeController">
+
+        <form>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="searchProduto">
+                </div>
+
+            </div>
+        </form>
+        
+        <a href="index.html">
+            <input class="btnExit" type="submit" value="Exit">
+        </a>
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        <strong>Id</strong>
+                    </td>
+                    <td>
+                        <strong>Name</strong>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="prod in produto | filter:searchProduto">
+                    <td>{{ prod.id }}</td>
+                    <td>{{ prod.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+</body>
+
+</html>
