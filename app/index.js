@@ -17,7 +17,7 @@ app.controller('HomeController', function ($scope) {
 
         },
         {
-            id: 02,
+            id: '02',
             name: 'Notebook'
 
         },
@@ -51,7 +51,7 @@ app.controller('LoginController', function ($scope, $window) {
     
     $scope.login = function (user, pass) {
         if (user == 'teste' && pass == 'teste') {
-            $window.location.href = 'home.html';
+            $window.location.href = '/app/home.html';
         } else {
             alert('Usuário ou senha esta incorreto.');
         }

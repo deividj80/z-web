@@ -30,8 +30,11 @@ module.exports = {
             {
                 test: require.resolve('jquery'),
                 loader: 'expose?jQuery!expose?$'
-            },
-            { test: /\.html/, loader: 'file?name=[name].[ext]' }
+            }
+            , {
+                test: /\.html/,
+                loader: 'file?name=[name].[ext]'
+            }
 
         ]
 
